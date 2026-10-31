@@ -1,0 +1,21 @@
+{
+  "name": "askwell-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@askwell/web",
+    "build": "npm run build --workspace=@askwell/widget && npm run build --workspace=@askwell/web",
+    "test": "npm test --workspaces --if-present",
+    "lint": "npm run lint --workspace=@askwell/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:types": "echo 'Run Supabase MCP type generator or supabase gen types typescript'"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}
