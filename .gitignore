@@ -32,6 +32,7 @@ coverage
 # Turbo & Tool caches
 .turbo
 .eslintcache
+*.tsbuildinfo
 
 # OS Files
 .DS_Store
